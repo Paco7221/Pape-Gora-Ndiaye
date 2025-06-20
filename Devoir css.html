@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriMove - Transport Intelligent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a365d 0%, #2a52be 100%);
+        }
+        
+        .photo-frame {
+            border: 12px solid white;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 3px solid #e9c46a;
+        }
+        
+        .map-container {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-900 flex items-center">
+                <i class="fas fa-bus-alt mr-2 text-blue-700"></i> AfriMove
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#accueil" class="text-gray-700 hover:text-blue-600">Accueil</a>
+                <a href="#solution" class="text-gray-700 hover:text-blue-600">Solution</a>
+                <a href="#avantages" class="text-gray-700 hover:text-blue-600">Avantages</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-xl text-blue-900"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero avec belle photo -->
+    <section id="accueil" class="relative overflow-hidden">
+        <div class="hero-gradient text-white pt-32 pb-20 px-6">
+            <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Transformez vos déplacements en Afrique</h1>
+                    <p class="text-xl mb-8 opacity-90">Une solution sur mesure pour un transport moderne et efficace</p>
+                    <a href="#solution" class="inline-block bg-white text-blue-900 font-medium px-8 py-3 rounded-lg hover:bg-gray-100 transition duration-300">
+                        Découvrir <i class="fas fa-arrow-down ml-2"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80" 
+                         alt="Transport urbain en Afrique" 
+                         class="rounded-lg photo-frame w-full max-w-md">
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-white transform skew-y-2 origin-left"></div>
+    </section>
+
+    <!-- Solution avec photo -->
+    <section id="solution" class="py-20 px-6 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80" 
+                         alt="Application mobile AfriMove" 
+                         class="rounded-lg photo-frame w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6">Notre Solution Technologique</h2>
+                    <p class="text-lg mb-8 text-gray-700">AfriMove combine une application mobile intuitive avec une plateforme de gestion intelligente pour révolutionner les transports en Afrique.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                            <div class="text-blue-700 text-3xl mb-4">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Application Mobile</h3>
+                            <p class="text-gray-600">Disponible sur iOS et Android</p>
+                        </div>
+                        
+                        <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                            <div class="text-blue-700 text-3xl mb-4">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Navigation Intelligente</h3>
+                            <p class="text-gray-600">Itinéraires optimisés en temps réel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avantages avec photos -->
+    <section id="avantages" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-16">Nos Principaux Avantages</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="feature-card bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80" 
+                             alt="Rapidité" 
+                             class="w-full h-48 object-cover rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Gain de Temps</h3>
+                    <p class="text-gray-600">Réduisez jusqu'à 30% vos temps de trajet</p>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1613243555988-441166d7d56b?ixlib=rb-4.0.3& 
+                             class="w-full h-48 object-cover rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Économies</h3>
+                    <p class="text-gray-600">Jusqu'à 25% moins cher que les solutions traditionnelles</p>
+                </div>
+                
+                <div class="feature-card bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80" 
+                             alt="Écologie" 
+                             class="w-full h-48 object-cover rounded-lg mb-4">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Écologique</h3>
+                    <p class="text-gray-600">Réduisez votre empreinte carbone</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Carte avec belle image -->
+    <section class="py-16 px-6 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="bg-gray-50 p-8 rounded-xl">
+                <h2 clcass="text-2xl font-bold text-center text-blue-900 mb-8">Déjà présent dans 5 pays africains</h2>
+                <div class="map-container rounded-lg" 
+                     style="background-image: url('https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80')">
+                    <div class="bg-black bg-opacity-40 h-full flex items-center justify-center">
+                        <div class="text-white text-center p-6 max-w-2xl">
+                            <h3 class="text-2xl font-bold mb-4">Afrique connectée</h3>
+                            <p>Déployé avec succès au Sénégal, Côte d'Ivoire, Kenya, Nigeria et Afrique du Sud</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact avec photo d'équipe -->
+    <section id="contact" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80" 
+                         alt="Équipe AfriMove" 
+                         class="rounded-lg photo-frame w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6">Contactez Notre Équipe</h2>
+                    <p class="text-gray-700 mb-8">Une question sur notre solution ? Nos experts sont à votre disposition.</p>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <input type="text" placeholder="Votre nom" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Votre email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <textarea placeholder="Votre message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-900 text-white font-medium py-3 rounded-lg hover:bg-blue-800 transition duration-300">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-2xl font-bold flex items-center">
+                        <i class="fas fa-bus-alt mr-2"></i> AfriMove
+                    </a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-yellow-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-yellow-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-yellow-300"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:text-yellow-300"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-sm">
+                <p>&copy; 2025 AfriMove. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
